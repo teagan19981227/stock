@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./increasing-stocks-graphic.png">
+    <link rel="apple-touch-icon" href="./increasing-stocks-graphic.png">
+    <title>折返停利計算</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>折返停利計算</h2>
+        <form action="">
+            <p>進場價格：
+                <label for="entryPrice"></label>
+                <input type="text" name="entryPrice" id="entryPrice">
+            </p>
+            <p>預期獲利價格：
+                <label for="anticipatedPrice"></label>
+                <input type="text" name="anticipatedPrice" id="anticipatedPrice">
+            </p>
+            <p>停損價格設定：
+                <label for="stopPrice"></label>
+                <input type="text" name="stopPrice" id="stopPrice">
+            </p>
+            <p>折返停利設定趴數：
+                <label for="percentage"></label>
+                <input type="text" name="percentage" id="percentage">
+            </p>
+            <p> <button class="ok-btn" type="button">OK</button>
+            </p>
+
+        </form>
+        <table class="result">
+            <thead>
+                <tr>
+                    <td>當前價格</td>
+                    <td>停利趴數</td>
+                    <td>報酬風險比率</td>
+                    <td>離場時機</td>
+
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src='https://cdn.jsdelivr.net/npm/big.js@6.0.0/big.min.js'></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
