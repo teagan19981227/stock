@@ -1,0 +1,69 @@
+.dept
+    background: $gray
+    &__header
+    &__body 
+        height: 80vh
+        .dept__inner
+            height: 75vh
+            display: flex
+            flex-wrap: wrap
+            align-content: space-between
+            &-colleges
+                &:nth-of-type(1)
+                    margin-right: 3.75rem
+                &:nth-of-type(3)
+                    margin-right: 3.75rem                                
+            &-colleges
+                flex: 45%
+                .college__text
+                    box-shadow: $darkGray 0.625rem 0.625rem
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-end
+                    border: 1px solid $black
+                    transform: translateY(-1.53125rem)
+                    padding: 2.71875rem 1.25rem 1.25rem 1.25rem
+                    height: 30vh
+                    background: $white
+                    position: relative
+                    .more-info
+                        background: $white
+                        border: 2px solid $blue
+                        box-shadow: 0 0.3rem 0 $blue
+                        padding: 0.625rem 1.25rem
+                        border-radius: 999px
+                        transition: all 0.2s cubic-bezier(0.4, 0.2, 0.1, 1) 0s
+                        cursor: pointer
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        line-height: 1.3rem
+                        position: absolute
+                        bottom: 1.25rem
+                        right: 1.25rem
+                        a
+                            color: $black
+                            font-size: 1.1rem
+                            letter-spacing: 0.05rem
+                        i
+                            margin-left: 0.5rem
+
+                        &:hover
+                            box-shadow: 0 0 0 $blue
+                            transform: translateY(0.3rem)
+        
+        
+@media screen and (max-width: 789px)
+    .dept
+        &__header
+        &__body
+            height: 160vh
+            .dept__inner
+                height: 155vh
+                &-colleges
+                    flex: 100%
+                    &:nth-of-type(1)
+                        margin-right: 0px
+                    &:nth-of-type(3)
+                        margin-right: 0px    
+
