@@ -1,0 +1,111 @@
+.feature
+    background: $blue
+    padding-bottom: 10vh
+.feature__header
+    &::before
+        content: ''
+        position: absolute
+        height: 82.094px
+        width: 150px
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        background: $gray
+
+.blue__bg__header
+    &::before
+        display: none
+    h2
+        color: #ffffff
+        
+.feature__body
+    .feature__inner
+        &-items
+            display: grid
+            grid-template: "col-1 col-1 col-2 col-2 col-3 col-3" 1fr "col-4 col-4 col-4 col-5 col-5 col-5" 1fr "col-6 col-6 col-6 col-6 col-7 col-7" 1fr "col-8 col-8 col-9 col-9 col-9 col-9" 1fr / 1fr 1fr 1fr 1fr 1fr 1fr
+            gap: 4.6875rem
+            .inner-item
+                position: relative
+                border: 1px solid $black
+                background: $white
+                height: 30.8125rem
+                .feature__subhead
+                    transform: translate(-1px,-50%)
+                .feature__inner-text
+                    position: relative
+                    height: 100%
+                    transform: translateY(-3.0625rem)  
+                    padding-top: 65px
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    align-items: center
+                    box-shadow: $darkBlue 0.625rem 0.625rem
+                    .feature__remark
+                        font-size: 1.125rem
+                        letter-spacing: 0.25rem
+                        font-weight: 400
+                        text-align: center
+                    .feature__title
+                        display: flex
+                        align-items: baseline
+                        span
+                            font-size: 2.25rem
+                            line-height: 2.25rem
+                            font-weight: 500
+                        h2
+                            font-size: 4.5rem
+                            line-height: 4.5rem
+                            margin: 0 1.875rem 0 1.875rem
+                    .feature__image
+                        width: 16.25rem
+                        height: 100%
+                    .feature__footer
+                        width: 100%
+                        background: $gray
+                        padding: 20px
+                        z-index: 999
+                        p
+                            font-size: 0.875rem
+                            line-height: 1.5rem
+            .feature__inner-item-1
+                grid-area: col-1
+            .feature__inner-item-2
+                grid-area: col-2
+            .feature__inner-item-3 
+                grid-area: col-3
+            .feature__inner-item-4 
+                grid-area: col-4
+            .feature__inner-item-5 
+                grid-area: col-5
+            .feature__inner-item-6 
+                grid-area: col-6
+            .feature__inner-item-7 
+                grid-area: col-7
+            .feature__inner-item-8 
+                grid-area: col-8
+            .feature__inner-item-9 
+                grid-area: col-9
+
+@media screen and (max-width: 768px) and (min-width: 574px)
+    .feature
+        .feature__body
+            .feature__inner
+                &-items
+                    display: grid
+                    grid-template: "col-1 col-2" 1fr "col-3 col-4" 1fr "col-5 col-5" 1fr "col-6 col-7" 1fr "col-8 col-9" 1fr /  1fr 1fr
+                    .inner-item
+                        width: calc(44vw - 30px)
+                    .feature__inner-item-5
+                        width: calc(88vw)
+
+               
+@media screen and (max-width: 575px)
+    .feature
+        .feature__body
+            .feature__inner
+                &-items
+                    display: grid
+                    grid-template: "col-1" 1fr "col-2" 1fr "col-3" 1fr "col-4" 1fr "col-5" 1fr "col-6" 1fr "col-7" 1fr "col-8" 1fr "col-9" 1fr /  1fr
+
+    

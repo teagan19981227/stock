@@ -1,0 +1,119 @@
+*
+    margin: 0
+    padding: 0
+    list-style: 0
+    line-height: 1.8rem
+    text-decoration: none
+    list-style: none
+    box-sizing: border-box
+    font-family: 'Roboto', sans-serif
+    letter-spacing: 0.05em
+    color: $text-color
+
+html
+    overflow-x: hidden
+    @include phone
+        font-size: 14px
+
+.title
+    display: flex
+    margin-bottom: 3rem
+    
+
+.title__text
+    position: relative
+    font-size: 3.75rem
+    line-height: 3.75rem
+    color: transparentize($main-color, 0.5)
+    &::after
+        content: ''
+        position: absolute
+        width: 3.75rem
+        height: 3.75rem
+        background: orange
+        right: 0
+        border-radius: 999px
+        z-index: -1
+
+.mg-sm
+    margin-left: 2.63888vw
+    margin-right: 2.63888vw
+.mg-med
+    margin-left: 6.94444vw
+    margin-right: 6.94444vw
+.mg-lg
+    margin: 0rem 14.58333vw
+.mg-lg-l
+    margin: 0rem  0rem 0rem 14.58333vw
+.mg-lg-r
+    margin: 0rem 14.58333vw 0rem 0rem 
+
+.abilities__body
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    &>div
+        margin-bottom: 3rem
+    @include tablet
+        margin-left: 6.94444vw
+        margin-right: 6.94444vw
+
+.subtitle
+    .subtitle__text
+        display: flex
+        margin-bottom: 1.25rem
+        h2
+            font-size: 1.5rem
+            line-height: 1.5rem
+            span
+                font-size: 0.75em
+                line-height: 0.75em
+                color: transparentize($main-color, 0.5)
+                margin-left: 0.75rem
+
+.hidden-description
+    padding: 0.5rem
+    position: absolute
+    opacity: 0
+    z-index: 998
+    transition: 0.6s
+    @include tablet
+    li
+        font-size: 1vw
+        line-height: 2vw
+        color: #fff
+        @include tablet
+            font-size: 2.5vw
+            line-height: 5vw
+
+a
+    &:hover
+        .hidden-description
+            opacity: 1
+        img
+            filter: brightness(0.2)
+        
+
+section
+    display: flex
+    justify-content: center
+    flex-direction: column
+    height: calc(100vh + 77.8px)
+    scroll-snap-align: start
+    scroll-snap-stop: always
+    @include tablet
+        height: auto  
+    &:not(:first-of-type):not(:last-of-type)
+        @include tablet
+            padding-top: 4rem
+            padding-bottom: 6rem
+    &:last-of-type
+        @include tablet
+            padding-top: 4rem
+
+        
+            
+            
+
+

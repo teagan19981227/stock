@@ -1,0 +1,131 @@
+.info
+    background: $gray
+    height: 100vh
+.info__header
+    height: 20vh
+    margin-bottom: 10vh
+.info__body
+    .info__inner
+        .info__cards
+            display: flex
+            height: 40vh
+            .info__card
+                flex: 1
+                border: 1px solid #000
+                height: 40vh
+                display: flex
+                flex-direction: column
+                box-shadow: $darkGray 0.625rem 0.625rem
+                &:hover
+                    cursor: pointer
+                    i
+                        filter: grayscale(50%)
+                        transform: translate(0.3125rem,0.3125rem)
+                        box-shadow: $darkGray 0rem 0rem
+                        transition: all 0.2s cubic-bezier(0.3, 0.15, 0.05, 0.5) 0s   
+                &-title
+                    height: 5.6875rem
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    h3
+                        font-size: 1.75rem
+                        font-weight: 900
+                        color: $white
+                        text-stroke: 1.2px $black
+                        -webkit-text-stroke: 1.2px $black
+                        font-size: 1.75rem
+                        letter-spacing: 0.2rem
+                &-container
+                    flex: 1
+                    background: $white
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    i
+                        font-size: 3.5rem
+                        border: 1px solid #000
+                        border-radius: 999px
+                        height: 6.25rem
+                        width: 6.25rem
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        box-shadow: $darkGray 0.3125rem 0.3125rem   
+                        color: $white
+                        -webkit-text-stroke: 1.5px $black
+                        text-stroke: 1.5px $black      
+                &:not(:last-child)
+                    margin-right: 3.1875rem
+                    
+    .info__footer
+        height: 30vh
+
+@media screen and (max-width: 768px) and (min-width: 574px)
+    .info
+        height: 125vh
+    .info__body
+        .info__inner
+            .info__cards
+                display: flex
+                flex-wrap: wrap
+                height: calc(80vh + 3.1875rem)
+                .info__card
+                    flex: calc(50% - 3.1875rem)
+                    border: 1px solid #000
+                    height: 40vh
+                    display: flex
+                    flex-direction: column
+                    box-shadow: $darkGray 0.625rem 0.625rem
+                    &:nth-of-type(1)
+                        margin-bottom: 3.1875rem
+                    &:nth-of-type(2)
+                        margin-right: 0rem
+                        margin-bottom: 3.1875rem
+                        
+
+@media screen and (max-width: 575px)
+    .info
+        height: 100vh
+    .info__header
+        margin-bottom: 0vh
+    .info__body
+        height: 95vh
+        .info__inner
+            .info__cards
+                display: flex
+                flex-wrap: wrap
+                height: 75vh
+                .info__card
+                    flex: 100%
+                    border: 1px solid #000
+                    height: 15vh
+                    display: flex
+                    flex-direction: row-reverse
+                    box-shadow: $darkGray 0.625rem 0.625rem
+                    margin: 0px !important
+                    &-title
+                        flex:  6
+                        height: 100%
+                    &-container
+                        flex: 4
+                        i
+                            font-size: 3.5rem
+                            border: 0px
+                            height: 100%
+                            border-radius: 0px
+                            width: 100%
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            box-shadow: none  
+                            color: $white
+                            -webkit-text-stroke: 1.5px $black
+                            text-stroke: 1.5px $black 
+                    &:hover
+                        cursor: pointer
+                        i
+                            filter: none
+                            transform: translate(0px ,0px)    
+        .info__footer
+            height: 0vh          
