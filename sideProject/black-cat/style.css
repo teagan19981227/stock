@@ -629,6 +629,7 @@ a:hover {
   }
   #header nav .menu__list-side li {
     line-height: 3;
+    font-size: 3.906vw;
   }
   #header nav .menu__list-side li::after {
     position: absolute;
