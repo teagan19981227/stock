@@ -11,33 +11,6 @@ let menuListSideLink = document.querySelectorAll('#header nav .menu__list-side l
 
 
 let menuOpen = false
-    // window.onscroll = function() {
-    //     let currentScroll = window.pageYOffset
-    //     console.log(currentScroll)
-    //     if (currentScroll > '37.5') {
-    //         menuList.style.top = '-5.834vw'
-    //         menuBtn.style.top = '3.125vw'
-    //     } else {
-    //         if (menuOpen) {
-    //             menuList.style.top = '0'
-    //             menuBtn.style.top = 'calc(-3.125vw - 64.5px)'
-    //             menuListSide.style.right = "-100%";
-    //             main.style.opacity = 1;
-    //             sliderWrap.style.opacity = 1;
-    //             text.style.opacity = 1;
-    //             footer.style.opacity = 1;
-    //             menuBtn.classList.add('menu__btn--open');
-
-//             menuOpen = false
-//         } else {
-//             menuList.style.top = '0'
-//             menuBtn.style.top = 'calc(-3.125vw - 64.5px)'
-//             menuBtn.classList.remove('menu__btn--open');
-//         }
-
-//     }
-//     prevScroll = currentScroll
-// }
 
 
 
@@ -82,16 +55,6 @@ menuBtn.addEventListener('click', function() {
     }
 })
 
-
-// menuListSideLink.addEventListener('click', function() {
-//     menuListSide.style.right = "-100%";
-//     main.style.opacity = 1;
-//     sliderWrap.style.opacity = 1;
-//     text.style.opacity = 1;
-//     footer.style.opacity = 1;
-//     menuBtn.classList.remove('menu__btn--open');
-//     menuOpen = false
-// })
 
 menuListSideLink.forEach(i => {
     i.addEventListener('click', function() {
