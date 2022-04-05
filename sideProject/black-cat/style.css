@@ -717,6 +717,9 @@ a:hover {
     font-size: 4.8vw;
     margin-bottom: 1.8vw;
   }
+  #main .sec-02 h6 {
+    font-size: 2.344vw;
+  }
   #main .sec-02 p {
     font-size: 3.385vw;
   }
@@ -765,6 +768,9 @@ a:hover {
   #main .sec-04 h5 {
     font-size: 4.8vw;
     margin-bottom: 1.8vw;
+  }
+  #main .sec-04 h6 {
+    font-size: 2.344vw;
   }
   #main .sec-04 p {
     font-size: 3.385vw;
