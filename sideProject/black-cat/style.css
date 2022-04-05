@@ -603,7 +603,7 @@ a:hover {
     margin-top: 6px;
   }
   #header nav .menu__btn p {
-    font-size: 0.729vw;
+    font-size: 2.865vw;
     padding: 6px;
     padding-bottom: 0;
     letter-spacing: 0.25em;
@@ -655,7 +655,7 @@ a:hover {
   #header h2 {
     left: 3.354vw;
     top: 9.042vw;
-    font-size: 1.286vw;
+    font-size: 3.216vw;
   }
   #header h1 {
     top: 14.792vw;
@@ -666,7 +666,7 @@ a:hover {
     margin-top: 35.073vw;
   }
   #header > ul li {
-    font-size: 0.938vw;
+    font-size: 3.385vw;
   }
   #header > ul li:not(:last-of-type) {
     padding-right: 2.8vw;
@@ -690,12 +690,18 @@ a:hover {
   #main > div section h4 {
     font-size: 3.7vw;
   }
+  #main > div section p {
+    font-size: 3.385vw;
+  }
   #main .sec-01 .wave {
     height: 48.375vw;
     background-size: 1919px 48.375vw;
   }
   #main .sec-01 .wave-2 {
     height: 50.375vw;
+  }
+  #main .sec-01 .wave p {
+    font-szie: 3.385vw;
   }
   #main .sec-02 {
     margin-left: 5vw;
@@ -707,7 +713,7 @@ a:hover {
     font-size: 4.8vw;
   }
   #main .sec-02 p {
-    font-size: 1.042vw;
+    font-size: 3.385vw;
   }
   #main .sec-02 .sec-02__text-1 {
     order: 1;
@@ -753,7 +759,7 @@ a:hover {
     font-size: 4.8vw;
   }
   #main .sec-04 p {
-    font-size: 1.042vw;
+    font-size: 3.385vw;
   }
   #main .sec-04 .sec-04__text-1 {
     order: 1;
@@ -775,7 +781,7 @@ a:hover {
   }
 
   #footer h3 {
-    font-size: 1.953vw;
+    font-size: 6.51vw;
     letter-spacing: 0.15em;
     margin-bottom: 4.479vw;
   }
