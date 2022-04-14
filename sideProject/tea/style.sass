@@ -25,10 +25,23 @@ $white: #ffffff
     text-decoration: none
     list-style: none
     cursor: default
+    @include sp
+        &:hover
+            transform: none
 
-body, html
+
+header,section
     @include sp
         overflow-x: hidden
+
+.pc
+    display: block
+    @include sp
+        display: none
+.sp
+    display: none
+    @include sp
+        display: block
 
 
 //font setting    
@@ -178,6 +191,8 @@ img
     align-items: center
     justify-content: center
     margin: 0 auto
+    @include sp
+        margin: 10vw 0 0 0
     h4
         position: relative
         font-size: 1.25vw
@@ -188,7 +203,7 @@ img
         transition: 0.8s
         @include sp
             font-size: 3.125vw
-            padding-left: 4.688vw
+            padding-left: 0
     &:hover
         h4
             letter-spacing: 0.2em
@@ -214,6 +229,7 @@ img
             background: $bg-color
             border: 1px solid $green-color
             @include sp
+                background: transparent
                 width: 14.063vw
                 height: 14.063vw                           
         &:nth-of-type(2)
@@ -236,13 +252,18 @@ img
         font-size: 1.354vw
         line-height: 1
         letter-spacing: 0.12em
+        @include sp
+            font-size: 3.385vw
     p
         &:nth-of-type(1)
             width: 2.604vw
             height: 2.604vw
             border-radius: 999px
             background: transparent
-            border: 1px solid $green-color                        
+            border: 1px solid $green-color      
+            @include sp
+                width: 6.510vw
+                height: 6.51vw                  
         &:nth-of-type(2)
             height: 5.208vw
             width: 1px
@@ -250,6 +271,10 @@ img
             transform: translateY(-1.042vw)
             margin-bottom: 0.521vw
             transition: 0.5s
+            @include sp
+                height: 10.021vw
+                transform: translateY(-2.604vw)
+                margin-bottom: 1.3vw
     &:hover
         margin-top: 2.5vw
         p
@@ -280,7 +305,7 @@ img
             @include sp
                 position: absolute
                 right: -56%
-                bottom: 15%
+                bottom: 22%
             img
                 max-width: 100%
                 padding-top: 4.583vw
@@ -288,6 +313,7 @@ img
                 vertical-align: middle
                 @include sp
                     width: 72vw
+                    opacity: 0.5
 
 main
     section.sec.sec-1
@@ -304,7 +330,7 @@ main
         align-items: center
         padding: 9.115vw 19.271vw 9.115vw 19.271vw
         @include sp
-            padding: 14.323vw 6.271vw 14.323vw 6.271vw
+            padding: 14.323vw 3.271vw 14.323vw 3.271vw
         .sec-3
             &__title
                 text-align: center
@@ -390,19 +416,34 @@ main
         justify-content: space-between
         align-items: flex-start
         .shop__img
+            img
+                @include sp
+                    width: 113.932vw
+                    opacity: 0.25
         .text__content
             position: absolute
             left: 52.083vw
             top: 5.729vw
             padding: 0
+            flex-direction: column
+            @include sp
+                left: 10%
+                top: 25%
             .text__wrap
             .view_more
-                margin-top: 2.865vw
+                margin: 2.865vw 0 0 11.6vw
+                @include sp
+                    margin: 2.865vw 0 0 0 
+                h4
+                    @include sp
+                        padding-left: 0
         .okashi__img
             position: absolute
             top: -2.604vw
             right: 12.500vw
             width: 13.542vw
+            @include sp
+                display: none
     section.sec.sec-5
         position: relative
         justify-content: center
@@ -415,6 +456,9 @@ main
                 >a
                     &:not(:last-of-type)
                         padding-right: 10.417vw
+        img
+            @include sp
+                    width: 875px
                     
                 
 #footer
@@ -424,13 +468,31 @@ main
             justify-content: space-between
             align-items: center
             padding: 4.167vw 41.406vw 4.427vw 41.406vw
+            @include sp
+                flex-direction: column
+                flex-wrap: wrap
+                padding: 10.417vw 0 4vw 0
+                h5
+                    flex: 100% 1
+                div
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    width: 18%
             .footer__text
                 font-size: 1.146vw
                 letter-spacing: 0.1em
+                @include sp
+                    font-size: 2.865vw
             .fa-brands
                 font-size: 2.65vw
                 color: $text-color
                 transition: 0.3s ease-in-out
+                &:nth-of-type(1)
+                        padding-right: 1.1vw
+                @include sp
+                    font-size: 6.641vw
+                    margin-top: 4vw
                 &:hover
                     color: $green-color
         &__logo
@@ -438,10 +500,17 @@ main
             justify-content: space-between
             align-items: center
             padding-bottom: 3.646vw
+            @include sp
+                padding-bottom: 10.417vw
             .footer__icon
                 width: 1.875vw
                 padding-bottom: 0.625vw
+                @include sp
+                    width: 4.688vw
+                    padding-bottom: 1.563vw
             small
                 font-size: 0.729vw
                 letter-spacing: 0.15em
+                @include sp
+                    font-size: 1.823vw
 
