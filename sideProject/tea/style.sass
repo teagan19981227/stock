@@ -1,0 +1,442 @@
+
+
+$main-font: 'kozuka-mincho-pr6n', serif
+$pg-font: 'Noto Sans JP', sans-serif
+$eng-font: 'Book Antiqua', serif
+$text-color: #000000
+$green-color: #92d045
+$bg-color: #e6ebef
+$white: #ffffff
+
+@mixin laptop 
+    @media only screen and (min-width: 765px) and (max-width: 1099px)
+        @content
+
+@mixin sp 
+    @media(max-width: 768px)
+        @content
+
+
+  
+
+*,body,html
+    margin: 0
+    padding: 0
+    text-decoration: none
+    list-style: none
+    cursor: default
+
+//font setting    
+
+.main-ft
+    font-family: $main-font
+    font-weight: 500
+    font-style: normal
+.pg-ft
+    font-family: $pg-font
+    font-weight: 400
+    font-style: normal
+    
+
+.eng-ft
+    font-family: $eng-font
+    font-weight: 400
+    font-style: normal
+
+.fl
+    display: flex
+
+a
+    color: inherit
+    transition: 0.5s
+    cursor: pointer
+    *
+        cursor: pointer
+        
+
+.pg
+    font-size: 1.198vw
+    letter-spacing: 0.11em
+    line-height: 1.65
+    @include sp
+        font-size: 2.995vw
+
+.tlt
+    &_sm
+        font-size: 1.354vw
+        letter-spacing: 0.15em
+        @include sp
+            font-size: 3.385vw
+    &_lg
+        font-size: 1.979vw
+        letter-spacing: 0.1em
+        @include sp
+            font-size: 4.948vw
+
+#header
+    position: relative
+    .menu
+        position: fixed
+        padding: 1.823vw 0 0 1.823vw
+        justify-content: space-between
+        width: calc(100vw - 3.646vw)
+        z-index: 999
+        &_btn
+            width: 3.333vw
+            @include sp
+                width: 8.333vw
+            span
+                display: block
+                height: 2px
+                width: 100%
+                background: $white
+                &:nth-of-type(1)
+                    margin-bottom: 0.781vw
+                    @include sp
+                        margin-bottom: 1.953vw
+                &:nth-of-type(3)
+                    margin-top: 0.781vw
+                    @include sp
+                        margin-top: 1.953vw
+            p
+                text-align: center
+                padding-top: 0.938vw
+                color: $white
+                font-size: 0.88vw
+                letter-spacing: 0.2em
+                @include sp
+                    padding-top: 2.344vw
+                    font-size: 2.214vw
+        &_list
+            align-items: flex-start
+            li
+                font-size: 1.25vw
+                letter-spacing: 0.08em
+                line-height: 1
+                padding: 0.521vw 1.302vw 0.521vw 0px
+                margin-right: 1.302vw
+                border-bottom: transparent 1px solid
+                transition: 0.5s
+                color: $text-color
+                @include sp
+                    font-size: 3.125vw
+                &:hover
+                    border-bottom: $green-color 1px solid
+                    
+                    
+                    
+    .bg
+        position: relative
+        align-items: center
+        justify-content: center
+        .fl
+            position: absolute
+            height: inherit
+            align-items: center
+            justify-content: center
+            h1
+                font-size: 3.646vw
+                writing-mode: vertical-rl
+                letter-spacing: 0.3em
+                line-height: 1.5
+                @include sp
+                    font-size: 9.115vw
+            span
+                display: block
+                font-size: 0.98vw
+                writing-mode: vertical-rl
+                letter-spacing: 0.12em
+                line-height: 4
+                @include sp
+                    font-size: 2.474vw
+.wrap
+    max-width: 63.021vw
+    margin: 0 auto
+    @include sp
+        max-width: 90vw
+
+.line
+    width: 1px
+    height: 4.375vw
+    display: block
+    background: $green-color
+
+img
+    width: 1920px
+    max-width: 100%
+    @include sp
+        max-width: none
+
+
+.view_more
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 auto
+    h4
+        position: relative
+        font-size: 1.25vw
+        text-align: center
+        letter-spacing: 0.12em
+        padding-left: 1.875vw
+        z-index: 1
+        transition: 0.8s
+        @include sp
+            font-size: 3.125vw
+            padding-left: 4.688vw
+    &:hover
+        h4
+            letter-spacing: 0.2em
+        .circle--horizontal
+            transform: rotate(-180deg)
+
+                    
+
+.circle--horizontal
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    transform: translate(-2.6vw)
+    transition: 0.6s ease-in-out
+    @include sp
+        transform: translate(-6.510vw)
+    p
+        &:nth-of-type(1)
+            width: 5.625vw
+            height: 5.625vw
+            border-radius: 999px
+            background: $bg-color
+            border: 1px solid $green-color
+            @include sp
+                width: 14.063vw
+                height: 14.063vw                           
+        &:nth-of-type(2)
+            height: 1px
+            width: 5.208vw
+            background: $green-color
+            transform: translate(-1.875vw)
+            @include sp
+                width: 13.021vw
+                transform: translate(-4.688vw)
+
+        
+.circle--vertical
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    transition: 0.5s
+    h4
+        font-size: 1.354vw
+        line-height: 1
+        letter-spacing: 0.12em
+    p
+        &:nth-of-type(1)
+            width: 2.604vw
+            height: 2.604vw
+            border-radius: 999px
+            background: transparent
+            border: 1px solid $green-color                        
+        &:nth-of-type(2)
+            height: 5.208vw
+            width: 1px
+            background: $green-color
+            transform: translateY(-1.042vw)
+            margin-bottom: 0.521vw
+            transition: 0.5s
+    &:hover
+        margin-top: 2.5vw
+        p
+            &:nth-of-type(2)
+                height: 2.708vw
+
+.text__content
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-start
+    padding-top: 5.729vw
+    padding-bottom: 5.729vw
+    @include sp
+        position: relative
+        padding-top: 14.323vw
+        padding-bottom: 14.323vw
+    >div
+        &:nth-of-type(1)
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            z-index: 998
+            h3
+                display: flex
+                flex-direction: column
+                align-items: center
+        &:nth-of-type(2)
+            @include sp
+                position: absolute
+                right: -56%
+                bottom: 15%
+            img
+                max-width: 100%
+                padding-top: 4.583vw
+                width: 21.354vw
+                vertical-align: middle
+                @include sp
+                    width: 72vw
+
+main
+    section.sec.sec-1
+        background: $bg-color
+    section.sec.sec-2
+        @include sp
+            display: flex
+            justify-content: center
+            img
+                max-width: 875px
+
+    section.sec.sec-3
+        flex-direction: column
+        align-items: center
+        padding: 9.115vw 19.271vw 9.115vw 19.271vw
+        @include sp
+            padding: 14.323vw 6.271vw 14.323vw 6.271vw
+        .sec-3
+            &__title
+                text-align: center
+                h2
+                    font-size: 2.865vw
+                    line-height: 1
+                    letter-spacing: 0.15em
+                    margin-bottom: 1.042vw
+                    @include sp
+                        font-size: 7.161vw
+                        margin-bottom: 2.604vw
+                h3
+                    font-size: 1.354vw
+                    line-height: 1
+                    letter-spacing: 0.2em
+                    margin-bottom: 6.51vw
+                    @include sp
+                        font-size: 3.385vw
+                        margin-bottom: 16.276vw
+            &__items
+                flex-wrap: wrap
+                align-items: center
+                justify-content: space-between
+                .sec-3
+                    &__item
+                        flex-direction: column
+                        align-items: center
+                        justify-content: center
+                        width: 33.33%
+                        &__title
+                            font-size: 1.042vw
+                            writing-mode: vertical-rl
+                            letter-spacing: 0.3em
+                            padding-left: 0.417vw
+                            padding-right: 0.417vw
+                            border-left: 1px solid $text-color
+                            border-right: 1px solid $text-color
+                            line-height: 1
+                            margin-bottom: 0.521vw
+                            @include sp
+                                font-size: 2.604vw
+                                padding-left: 1.042vw
+                                padding-right: 1.042vw
+                                margin-bottom: 1.302vw
+                        img
+                            width: 15.156vw
+                            margin-bottom: 1.563vw
+                            @include sp
+                                width: 23.156vw
+                        .view_more
+                            width: auto
+                            h4
+                                font-size: 0.938vw
+                                letter-spacing: 0.15em
+                                padding-left: 1.250vw
+                                @include sp
+                                    font-size: 2.344vw
+                            .circle--horizontal
+                                transform: translate(0)
+                                padding-left: 1.250vw
+                                p
+                                    &:nth-of-type(1)
+                                        width: 2.500vw
+                                        height: 2.500vw
+                                        background: $white
+                                    &:nth-of-type(2)
+                                        width: 3.542vw
+                                        transform: translate(-1.250vw)
+                        &:hover
+                            .view_more
+                                h4
+                                    letter-spacing: 0.2em
+                                .circle--horizontal
+                                    transform: rotate(-180deg)
+
+
+                        &:nth-of-type(1),&:nth-of-type(2),&:nth-of-type(3)
+                            margin-bottom: 6.771vw
+                            @include sp
+                                margin-bottom: 16.927vw
+    section.sec.sec-4
+        position: relative
+        justify-content: space-between
+        align-items: flex-start
+        .shop__img
+        .text__content
+            position: absolute
+            left: 52.083vw
+            top: 5.729vw
+            padding: 0
+            .text__wrap
+            .view_more
+                margin-top: 2.865vw
+        .okashi__img
+            position: absolute
+            top: -2.604vw
+            right: 12.500vw
+            width: 13.542vw
+    section.sec.sec-5
+        position: relative
+        justify-content: center
+        align-items: center
+        .sec-5
+            &__content
+                position: absolute
+                justify-content: space-between
+                align-items: center
+                >a
+                    &:not(:last-of-type)
+                        padding-right: 10.417vw
+                    
+                
+#footer
+    background: $bg-color
+    .footer
+        &__media
+            justify-content: space-between
+            align-items: center
+            padding: 4.167vw 41.406vw 4.427vw 41.406vw
+            .footer__text
+                font-size: 1.146vw
+                letter-spacing: 0.1em
+            .fa-brands
+                font-size: 2.65vw
+                color: $text-color
+                transition: 0.3s ease-in-out
+                &:hover
+                    color: $green-color
+        &__logo
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+            padding-bottom: 3.646vw
+            .footer__icon
+                width: 1.875vw
+                padding-bottom: 0.625vw
+            small
+                font-size: 0.729vw
+                letter-spacing: 0.15em
+
